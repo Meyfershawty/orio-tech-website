@@ -45,14 +45,14 @@ export const metadata: Metadata = {
 
   publisher: "Orion Tech",
 
-  metadataBase: new URL("https://oriontech.co.mz"),
+  metadataBase: new URL("https://orio-tech-website-wtgc.vercel.app"),
 
   openGraph: {
     title: "Orion Tech",
     description:
       "Transformamos ideias em soluções digitais modernas.",
 
-    url: "https://oriontech.co.mz",
+    url: "https://orio-tech-website-wtgc.vercel.app",
 
     siteName: "Orion Tech",
 
@@ -83,6 +83,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+  google: "kiRI7AVEXJ8uTNHm46r6qauWm0cqKz9XRSFdNxFU9PY",
+},
 
   icons: {
     icon: "/favicon.png",
@@ -100,8 +103,8 @@ export default function RootLayout({
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Orion Tech",
-  url: "https://oriontech.co.mz",
-  logo: "https://oriontech.co.mz/orion-logo.png",
+  url: "https://orio-tech-website-wtgc.vercel.app",
+  logo: "https://orio-tech-website-wtgc.vercel.app/orion-logo.png",
   description:
     "A Orion Tech desenvolve websites modernos, aplicações web, soluções de Inteligência Artificial e consultoria tecnológica.",
 
