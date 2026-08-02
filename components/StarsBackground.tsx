@@ -1,18 +1,11 @@
 "use client";
 
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
-import type { Engine } from "tsparticles-engine";
+import Particles from "@tsparticles/react";
 
 export default function StarsBackground() {
-  const particlesInit = async (engine: Engine) => {
-    await loadSlim(engine);
-  };
-
   return (
     <Particles
       id="stars"
-      init={particlesInit}
       className="absolute inset-0"
       options={{
         fullScreen: {
@@ -24,6 +17,7 @@ export default function StarsBackground() {
           },
         },
         fpsLimit: 60,
+        detectRetina: true,
         particles: {
           number: {
             value: 80,
@@ -51,7 +45,6 @@ export default function StarsBackground() {
             },
           },
         },
-        detectRetina: true,
       }}
     />
   );
