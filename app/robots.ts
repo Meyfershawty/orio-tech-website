@@ -1,16 +1,12 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://oriontech.co.mz";
-
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-
-    sitemap: `${baseUrl}/sitemap.xml`,
-
-    host: baseUrl,
+    sitemap: "https://orio-tech-website-wtgc.vercel.app/sitemap.xml",
+    host: "https://orio-tech-website-wtgc.vercel.app",
   };
 }
