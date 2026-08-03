@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://oriontech.co.mz";
+  const baseUrl = "https://orio-tech-website-wtgc.vercel.app";
 
   return [
     {
