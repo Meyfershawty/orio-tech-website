@@ -48,12 +48,18 @@ export default function Hero() {
           <div className="mt-12 flex flex-wrap justify-center gap-4 lg:justify-start">
 
             <a
-              href="#contacto"
-              className="flex items-center gap-3 rounded-xl bg-blue-600 px-8 py-4 font-semibold shadow-lg shadow-blue-600/30 transition-all duration-300 hover:scale-105 hover:bg-blue-500"
-            >
-              {t.hero.button1}
-              <FaArrowRight />
-            </a>
+  href="#contacto"
+  onClick={() => {
+    window.gtag?.("event", "request_quote", {
+      event_category: "engagement",
+      event_label: "Hero Button",
+    });
+  }}
+  className="flex items-center gap-3 rounded-xl bg-blue-600 px-8 py-4 font-semibold shadow-lg shadow-blue-600/30 transition-all duration-300 hover:scale-105 hover:bg-blue-500"
+>
+  {t.hero.button1}
+  <FaArrowRight />
+</a>
 
             <a
               href="#portfolio"
