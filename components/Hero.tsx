@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaArrowRight, FaChevronDown } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
-import StarsBackground from "@/components/StarsBackground";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Hero() {
   const { language } = useLanguage();
@@ -20,13 +20,14 @@ export default function Hero() {
 
       <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-cyan-500/10 blur-[180px]" />
 
-      {/* Estrelas em movimento */}
-      <div className="absolute inset-0">
-        <StarsBackground />
-      </div>
+      {/* Partículas digitais / rede neural */}
+      <AnimatedBackground />
 
       {/* Grelha */}
       <div className="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.08)_1px,transparent_1px)] bg-[size:40px_40px]" />
+
+      {/* Camada de contraste para legibilidade do texto */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/25 via-slate-950/10 to-slate-950/60" />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-between gap-20 px-6 py-28 lg:flex-row">
 
