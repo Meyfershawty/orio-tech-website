@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
@@ -16,7 +17,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-3">
+        <a href="/#inicio" className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white">
             O
           </div>
@@ -34,23 +35,27 @@ export default function Header() {
 
         {/* Menu Desktop */}
         <nav className="hidden md:flex items-center gap-8 text-slate-300">
-          <a href="#inicio" className="hover:text-blue-500 transition">
+          <a href="/#inicio" className="hover:text-blue-500 transition">
             {t.nav.home}
           </a>
 
-          <a href="#sobre" className="hover:text-blue-500 transition">
+          <a href="/#sobre" className="hover:text-blue-500 transition">
             {t.nav.about}
           </a>
 
-          <a href="#servicos" className="hover:text-blue-500 transition">
+          <a href="/#servicos" className="hover:text-blue-500 transition">
             {t.nav.services}
           </a>
 
-          <a href="#portfolio" className="hover:text-blue-500 transition">
+          <Link href="/servicos-premium" className="hover:text-blue-500 transition">
+            {t.nav.premium}
+          </Link>
+
+          <a href="/#portfolio" className="hover:text-blue-500 transition">
             {t.nav.portfolio}
           </a>
 
-          <a href="#contacto" className="hover:text-blue-500 transition">
+          <a href="/#contacto" className="hover:text-blue-500 transition">
             {t.nav.contact}
           </a>
         </nav>
@@ -109,23 +114,27 @@ export default function Header() {
 
           <nav className="flex flex-col p-6 gap-5 text-white">
 
-            <a href="#inicio" onClick={() => setMenuOpen(false)}>
+            <a href="/#inicio" onClick={() => setMenuOpen(false)}>
               {t.nav.home}
             </a>
 
-            <a href="#sobre" onClick={() => setMenuOpen(false)}>
+            <a href="/#sobre" onClick={() => setMenuOpen(false)}>
               {t.nav.about}
             </a>
 
-            <a href="#servicos" onClick={() => setMenuOpen(false)}>
+            <a href="/#servicos" onClick={() => setMenuOpen(false)}>
               {t.nav.services}
             </a>
 
-            <a href="#portfolio" onClick={() => setMenuOpen(false)}>
+            <Link href="/servicos-premium" onClick={() => setMenuOpen(false)}>
+              {t.nav.premium}
+            </Link>
+
+            <a href="/#portfolio" onClick={() => setMenuOpen(false)}>
               {t.nav.portfolio}
             </a>
 
-            <a href="#contacto" onClick={() => setMenuOpen(false)}>
+            <a href="/#contacto" onClick={() => setMenuOpen(false)}>
               {t.nav.contact}
             </a>
 

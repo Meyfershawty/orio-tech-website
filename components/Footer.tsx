@@ -103,7 +103,7 @@ export default function Footer() {
           </p>
 
           <a
-            href="#inicio"
+            href="/#inicio"
             className="rounded-lg bg-blue-600 px-5 py-2 hover:bg-blue-500 transition"
           >
             ↑ Voltar ao topo
