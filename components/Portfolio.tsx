@@ -11,9 +11,9 @@ export default function Portfolio() {
   const t = translations[language];
 
   const images = [
-    "/portfolio/project1.jpg",
-    "/portfolio/project2.jpg",
-    "/portfolio/project3.jpg",
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop",
   ];
 
   return (
@@ -63,6 +63,7 @@ export default function Portfolio() {
                     src={images[index]}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition duration-700 group-hover:scale-110"
                   />
 
