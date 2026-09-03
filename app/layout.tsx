@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,24 +43,20 @@ export const metadata: Metadata = {
   ],
 
   creator: "Orion Tech",
-
   publisher: "Orion Tech",
 
-  metadataBase: new URL("https://orio-tech-website-wtgc.vercel.app"),
+  metadataBase: new URL(
+    "https://orio-tech-website-wtgc.vercel.app"
+  ),
 
   openGraph: {
     title: "Orion Tech",
     description:
       "Transformamos ideias em soluções digitais modernas.",
-
     url: "https://orio-tech-website-wtgc.vercel.app",
-
     siteName: "Orion Tech",
-
     locale: "pt_PT",
-
     type: "website",
-
     images: [
       {
         url: "/orion-logo.png",
@@ -76,7 +72,6 @@ export const metadata: Metadata = {
     title: "Orion Tech",
     description:
       "Websites modernos, aplicações e soluções com Inteligência Artificial.",
-
     images: ["/orion-logo.png"],
   },
 
@@ -84,9 +79,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+
   verification: {
-  google: "kiRI7AVEXJ8uTNHm46r6qauWm0cqKz9XRSFdNxFU9PY",
-},
+    google: "kiRI7AVEXJ8uTNHm46r6qauWm0cqKz9XRSFdNxFU9PY",
+  },
 
   icons: {
     icon: "/favicon.png",
@@ -101,50 +97,50 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Orion Tech",
-  url: "https://orio-tech-website-wtgc.vercel.app",
-  logo: "https://orio-tech-website-wtgc.vercel.app/orion-logo.png",
-  description:
-    "A Orion Tech desenvolve websites modernos, aplicações web, soluções de Inteligência Artificial e consultoria tecnológica.",
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Orion Tech",
+    url: "https://orio-tech-website-wtgc.vercel.app",
+    logo: "https://orio-tech-website-wtgc.vercel.app/orion-logo.png",
+    description:
+      "A Orion Tech desenvolve websites modernos, aplicações web, soluções de Inteligência Artificial e consultoria tecnológica.",
+    email: "oriontech072@gmail.com",
+    telephone: "+258847973689",
 
-  email: "oriontech072@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "MZ",
+    },
 
-  telephone: "+258847973689",
+    sameAs: [],
+  };
 
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "MZ",
-  },
-
-  sameAs: [],
-};
   return (
     <html lang="pt">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Script
-  src="https://www.googletagmanager.com/gtag/js?id=G-SL9JY87GVF"
-  strategy="afterInteractive"
-/>
+          src="https://www.googletagmanager.com/gtag/js?id=G-SL9JY87GVF"
+          strategy="afterInteractive"
+        />
 
-<Script id="google-analytics" strategy="afterInteractive">
-  {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SL9JY87GVF');
+          `}
+        </Script>
 
-    gtag('config', 'G-SL9JY87GVF');
-  `}
-</Script>
         <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(organizationSchema),
-  }}
-/>
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+
         <LanguageProvider>
           {children}
         </LanguageProvider>
