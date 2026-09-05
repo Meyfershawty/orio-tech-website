@@ -120,12 +120,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <script
-  src="https://orion-ai-assistant-five.vercel.app/orion-widget.js"
-  data-orion-id="dbe408f9-7d55-49d7-9102-bd1c1ccbcafd"
-  data-orion-title="orion suport"
-  defer
-></script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SL9JY87GVF"
           strategy="afterInteractive"
