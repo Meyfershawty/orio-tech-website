@@ -121,6 +121,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Script
+  src="https://orion-ai-assistant-ay9q08d4q-oriontech1.vercel.app/orion-widget.js"
+  strategy="afterInteractive"
+  data-orion-id="f428c9f4-846e-4930-8099-85f9b78cc4b4"
+  data-orion-title="orion suport"
+/>
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SL9JY87GVF"
           strategy="afterInteractive"
         />
